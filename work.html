@@ -4,25 +4,26 @@ permalink: /work/
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
   {%- if site.posts.size > 0 -%}
+  {% assign sorted_posts = site.posts | sort: 'date' %}
   <p style="margin-top: 0">2025</p>
-  <ul class="post-list" style="list-style: none; padding-inline-start: 0; display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 60px"">
-    {%- for post in site.posts -%}
+  <ul class="post-list" style="list-style: none; padding-inline-start: 0; display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 60px">
+    {%- for post in sorted_posts -%}
     {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
     {% if year == "2025" %}
     <li>
-      <h2><a href="{{ post.url | prepend: site.baseurl }}"><img style="height: 150px" src="/images/{{ post.title }}" /></a></h2>
+      <h2><a href="{{ post.url | prepend: site.baseurl }}"><img style="height: 150px" src="/images/{{ post.file }}" /></a></h2>
     </li>
     {% endif %}
     {%- endfor -%}
   </ul>
 
   <p style="margin-top: 0">2024</p>
-  <ul class="post-list" style="list-style: none; padding-inline-start: 0">
-    {%- for post in site.posts -%}
+  <ul class="post-list" style="list-style: none; padding-inline-start: 0; display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 60px">
+    {%- for post in sorted_posts -%}
     {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
     {% if year == "2024" %}
     <li>
-      <h2><a href="{{ post.url | prepend: site.baseurl }}"><img style="height: 150px" src="/images/{{ post.title }}" /></a></h2>
+      <h2><a href="{{ post.url | prepend: site.baseurl }}"><img style="height: 150px" src="/images/{{ post.file }}" /></a></h2>
     </li>
     {% endif %}
     {%- endfor -%}
