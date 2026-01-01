@@ -1,38 +1,31 @@
-<html>
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=EB%20Garamond&amp;display=swap" rel="stylesheet">
-  </head>
-  <body style="font-family: 'EB Garamond'; text-decoration: none; padding-left: 30px;">
-    <div style="margin-top: 50px;">
-      <p style="font-size: 24px;">emily wang</p>
-    </div>
-    <div style="display: flex; flex-direction: row; margin-top: 20px; gap: 120px;">
-      <div style="font-size: 18px; display: flex; flex-direction: column; gap: 4px;">
-        <a href="/work" style="color: black; text-decoration: none;">work</a>
-        <a href="/info" style="color: darkgrey; text-decoration: none;">info</a>
-      </div>
-      <div>
-        <p style="margin-top: 0">2025</p>
-        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 60px">
-          <a href="/"><img src="https://emitoad.github.io/IMG_6775.JPG" style="height: 150px;"/></a>
-          <img src="https://emitoad.github.io/IMG_6775.JPG" style="height: 150px;"/>
-          <img src="https://emitoad.github.io/IMG_6775.JPG" style="height: 150px;"/>
-          <img src="https://emitoad.github.io/IMG_6775.JPG" style="height: 150px;"/>
-          <img src="https://emitoad.github.io/IMG_6775.JPG" style="height: 150px;"/>
-          <img src="https://emitoad.github.io/IMG_6775.JPG" style="height: 150px;"/>
-        </div>
-        <p>2024</p>
-        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-          <img src="https://emitoad.github.io/IMG_6775.JPG" style="height: 150px;"/>
-          <img src="https://emitoad.github.io/IMG_6775.JPG" style="height: 150px;"/>
-          <img src="https://emitoad.github.io/IMG_6775.JPG" style="height: 150px;"/>
-          <img src="https://emitoad.github.io/IMG_6775.JPG" style="height: 150px;"/>
-          <img src="https://emitoad.github.io/IMG_6775.JPG" style="height: 150px;"/>
-          <img src="https://emitoad.github.io/IMG_6775.JPG" style="height: 150px;"/>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+---
+layout: default
+permalink: /work/
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  {%- if site.posts.size > 0 -%}
+  <p style="margin-top: 0">2025</p>
+  <ul class="post-list" style="list-style: none; padding-inline-start: 0; display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 60px"">
+    {%- for post in site.posts -%}
+    {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% if year == "2025" %}
+    <li>
+      <h2><a href="{{ post.url | prepend: site.baseurl }}"><img style="height: 150px" src="/images/{{ post.title }}" /></a></h2>
+    </li>
+    {% endif %}
+    {%- endfor -%}
+  </ul>
+
+  <p style="margin-top: 0">2024</p>
+  <ul class="post-list" style="list-style: none; padding-inline-start: 0">
+    {%- for post in site.posts -%}
+    {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% if year == "2024" %}
+    <li>
+      <h2><a href="{{ post.url | prepend: site.baseurl }}"><img style="height: 150px" src="/images/{{ post.title }}" /></a></h2>
+    </li>
+    {% endif %}
+    {%- endfor -%}
+  </ul>
+  {%- endif -%}
+</article>

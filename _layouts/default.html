@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {%- include head.html -%}
+  <body style="font-family: 'EB Garamond'; text-decoration: none; padding-left: 30px;">
+    {%- include header.html -%}
+
+    <div style="display: flex; flex-direction: row; margin-top: 20px; gap: 120px;">
+      <div style="font-size: 18px; display: flex; flex-direction: column; gap: 4px;">
+        {%- if page.url == "/work/" -%}
+          <a href="/work" style="color: black; text-decoration: none;">work</a>
+        {%- else -%}
+          <a href="/work" style="color: darkgrey; text-decoration: none;">work</a>
+        {%- endif -%}
+
+        {%- if page.url == "/info/" -%}
+          <a href="/info" style="color: black; text-decoration: none;">info</a>
+        {%- else -%}
+          <a href="/info" style="color: darkgrey; text-decoration: none;">info</a>
+        {%- endif -%}
+      </div>
+      
+      <main style="flex-grow: 1" class="page-content" aria-label="Content">
+        {{ content }}
+      </main>
+    </div>
+  </body>
+</html>
