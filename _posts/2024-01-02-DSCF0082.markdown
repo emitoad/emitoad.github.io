@@ -2,4 +2,5 @@
 layout: post
 file:  "DSCF0082.jpg"
 date:   2024-01-02 15:08:43 -0600
+title: "something"
 ---
