@@ -11,7 +11,7 @@ permalink: /work/
     {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
     {% if year == "2025" %}
     <li>
-      <h2><a href="{{ post.url | prepend: site.baseurl }}"><img style="height: 150px" src="/images/{{ post.file }}" /></a></h2>
+      <h2><a href="{{ post.url | prepend: site.baseurl }}"><img style="height: 150px" src="/images/thumbnails/{{ post.file }}" /></a></h2>
     </li>
     {% endif %}
     {%- endfor -%}
@@ -23,7 +23,7 @@ permalink: /work/
     {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
     {% if year == "2024" %}
     <li>
-      <h2><a href="{{ post.url | prepend: site.baseurl }}"><img style="height: 150px" src="/images/{{ post.file }}" /></a></h2>
+      <h2><a href="{{ post.url | prepend: site.baseurl }}"><img style="height: 150px" src="/images/thumbnails/{{ post.file }}" /></a></h2>
     </li>
     {% endif %}
     {%- endfor -%}
