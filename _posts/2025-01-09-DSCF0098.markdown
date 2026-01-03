@@ -2,5 +2,6 @@
 layout: post
 file:  "DSCF0098.jpg"
 date:   2025-01-09 15:08:43 -0600
-title: "something"
+title: "9 to 5 (II)"
+description: "ink and charcoal on newsprint, 12x18"
 ---

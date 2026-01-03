@@ -2,5 +2,6 @@
 layout: post
 file:  "DSCF0072.jpg"
 date:   2025-01-05 15:08:43 -0600
-title: "something"
+title: "father"
+description: "oil on canvas, 18x24"
 ---

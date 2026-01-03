@@ -2,5 +2,6 @@
 layout: post
 file:  "IMG_1426.jpg"
 date:   2024-01-04 15:08:43 -0600
-title: "something"
+title: "squandering (III)"
+description: "oil on canvas, 8x8"
 ---
